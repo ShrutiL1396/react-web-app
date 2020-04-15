@@ -47,7 +47,7 @@ pipeline
      rm -rf frontend-${BUILD_NUMBER}.tar
      ls -ltr
      gsutil acl ch -u AllUsers:R gs://shruti-lanke1
-     gsutil acl ch -u AllUsers:R gs://shruti-lanke1
+     gsutil defacl set public-read gs://shruti-lanke1
      gsutil web set -m index.html -e index.html gs://shruti-lanke1
      
      gsutil cp -r * gs://shruti-lanke1
